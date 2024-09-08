@@ -8,7 +8,7 @@ def get_data():
     """
     API endpoint to get user details from LPU Live.
     """
-    id = "12223854"
+    id = request.args.get('id')
     token = "9daacfb1e97a628660431de6c9442481"
     url = f"https://lpulive.lpu.in/fugu-api/api/chat/groupChatSearch?en_user_id={token}&search_text={id}&user_role=USER"
     try:
